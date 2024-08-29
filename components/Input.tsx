@@ -1,7 +1,7 @@
-import React, { useState } from "react";
-import {StyleSheet, View, TextInput, Text } from "react-native";
+import React from "react";
+import {StyleSheet, Text, TextInput, View} from "react-native";
 
-interface InputProps  {
+interface InputProps {
     value: string,
     onChangeText: (text: string) => void
     label: string
@@ -10,14 +10,14 @@ interface InputProps  {
 export const Input: React.FC<InputProps> = ({value, label, onChangeText}) => {
     return <View style={styles.block}>
         <Text style={styles.label}>{label}</Text>
-        <TextInput 
+        <TextInput
             inputMode="numeric"
             keyboardType="number-pad"
-            value={value} 
-            style={styles.input} 
-            onChangeText={onChangeText} 
+            value={value}
+            style={styles.input}
+            onChangeText={onChangeText}
         />
-    </View>        
+    </View>
 }
 
 const styles = StyleSheet.create({
@@ -25,7 +25,7 @@ const styles = StyleSheet.create({
         width: '100%'
     },
     input: {
-        padding: 5, 
+        padding: 5,
         borderTopWidth: 1,
         borderLeftWidth: 1,
         borderRightWidth: 1,
@@ -40,4 +40,4 @@ const styles = StyleSheet.create({
         width: '100%',
         marginBottom: 2
     }
-  });
+});
